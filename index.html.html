@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anand Kumar | Data Analyst Portfolio</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --line:#2a2f3a;
+  --ink:#eef1f5; --muted:#9aa3b2; --accent:#38bdf8; --accent2:#6366f1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Calibri,Arial,sans-serif;line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav .brand{font-weight:800;font-size:17px;color:#fff}
+nav .links{display:flex;gap:22px;font-size:14px}
+nav .links a{color:var(--muted)}
+nav .links a:hover{color:#fff}
+
+/* Hero */
+header.hero{padding:70px 0 50px;border-bottom:1px solid var(--line);
+  background:radial-gradient(ellipse at top right, rgba(99,102,241,.18), transparent 60%);}
+.hero h1{font-size:40px;margin:0 0 6px;color:#fff}
+.hero h1 span{background:linear-gradient(135deg,#38bdf8,#6366f1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.role{font-size:18px;color:var(--accent);font-weight:600;margin:0 0 14px}
+.hero p.desc{max-width:600px;color:var(--muted);font-size:15px}
+.cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{padding:11px 22px;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;border:1px solid transparent}
+.btn.primary{background:linear-gradient(135deg,#38bdf8,#6366f1);color:#fff}
+.btn.ghost{border-color:var(--line);color:#fff}
+.btn:hover{filter:brightness(1.1)}
+
+/* Sections */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:24px;color:#fff;margin:0 0 26px;display:flex;align-items:center;gap:10px}
+section h2 i{width:8px;height:22px;border-radius:3px;background:linear-gradient(135deg,#38bdf8,#6366f1);display:inline-block}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.card h3{margin:0 0 6px;font-size:15px;color:var(--accent)}
+.card p{margin:0;color:#cbd5e1;font-size:14px}
+
+/* Skills */
+.skill-wrap{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;color:#e5e7eb}
+
+/* Projects */
+.project{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+.project .tag{display:inline-block;background:rgba(56,189,248,.15);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.project h3{margin:0 0 8px;font-size:19px;color:#fff}
+.project p{color:#cbd5e1;font-size:14px;margin:0 0 14px}
+.project ul{margin:0 0 16px;padding-left:18px;color:#cbd5e1;font-size:14px}
+.project ul li{margin-bottom:5px}
+.project .links{display:flex;gap:14px;flex-wrap:wrap}
+.project .links a{font-size:13.5px;font-weight:700;border:1px solid var(--line);padding:8px 16px;border-radius:8px;color:#fff}
+.project .links a:hover{border-color:var(--accent);color:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.kpi{background:var(--panel2);border-radius:10px;padding:10px 12px;text-align:center}
+.kpi b{display:block;font-size:17px;color:#fff}
+.kpi span{font-size:11px;color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:flex;gap:16px;flex-wrap:wrap}
+.contact-grid a,.contact-grid div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 20px;font-size:14px;color:#e5e7eb}
+
+footer{padding:26px 0;text-align:center;color:var(--muted);font-size:12.5px}
+
+@media(max-width:700px){
+  .about-grid{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  nav .links{gap:14px;font-size:12.5px}
+  .hero h1{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Anand Kumar</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Hi, I'm <span>Anand Kumar</span></h1>
+    <p class="role">Aspiring Data / MIS Analyst</p>
+    <p class="desc">BBA graduate who turns raw spreadsheets into clear, interactive dashboards and insights. Skilled in Excel, data analysis and building reports that help teams make faster decisions.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2><i></i>About Me</h2>
+    <div class="about-grid">
+      <div class="card">
+        <h3>Education</h3>
+        <p>Bachelor of Business Administration (BBA), Future Institute of Engineering and Management — CGPA 7.6 / 10</p>
+      </div>
+      <div class="card">
+        <h3>Focus</h3>
+        <p>Looking for a role as an MIS Analyst — working with sales and business data, building dashboards, and presenting insights clearly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2><i></i>Skills</h2>
+    <div class="skill-wrap">
+      <span class="skill">Microsoft Excel</span>
+      <span class="skill">Data Analysis</span>
+      <span class="skill">Dashboard Design</span>
+      <span class="skill">MIS Reporting</span>
+      <span class="skill">Pivot Tables</span>
+      <span class="skill">Data Visualization</span>
+      <span class="skill">PowerPoint Presentations</span>
+      <span class="skill">Claude AI (AI-assisted analysis)</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2><i></i>Projects</h2>
+
+    <div class="project">
+      <span class="tag">AI-Assisted Project</span>
+      <h3>Sales Performance Dashboard</h3>
+      <p>Interactive dashboard built from a 1,036-order sales dataset (Apr–Sep 2022), with live filtering and a management presentation.</p>
+      <div class="kpis">
+        <div class="kpi"><b>₹1.79 Cr</b><span>Total Revenue</span></div>
+        <div class="kpi"><b>1,036</b><span>Orders</span></div>
+        <div class="kpi"><b>4</b><span>KPI Cards</span></div>
+        <div class="kpi"><b>6</b><span>Charts</span></div>
+      </div>
+      <ul>
+        <li>Built KPI cards for total, online and offline revenue, and total orders</li>
+        <li>Added interactive slicers for Month, Product, Seller and Payment Mode, with a reset button</li>
+        <li>Designed 6 charts: monthly revenue, weekly trend, payment mode split, revenue by product, top 3 products and top 3 sellers</li>
+        <li>Found that SSD 256 GB drives 24.5% of revenue and CCC Mart contributes 31% of sales</li>
+        <li>Presented findings to management in a short, data-backed deck</li>
+      </ul>
+      <div class="links">
+        <a href="https://anandkumar02.github.io/dashboard.html" id="dashboard-link" target="_blank" rel="noopener">🔗 Live Dashboard</a>
+        <a href="https://github.com/Anandkumar02" id="github-link" target="_blank" rel="noopener">💻 GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2><i></i>Contact</h2>
+    <div class="contact-grid">
+      <a href="mailto:kumaranand36955@gmail.com">✉️ kumaranand36955@gmail.com</a>
+      <a href="https://www.linkedin.com/in/anand-kumar123" target="_blank" rel="noopener">🔗 LinkedIn</a>
+      <a href="https://github.com/Anandkumar02" target="_blank" rel="noopener">💻 GitHub</a>
+      <div>📞 7004392195</div>
+      <div>📍 Jharkhand, India</div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Anand Kumar — Built with data, Excel and a little help from AI.</footer>
+
+</body>
+</html>
